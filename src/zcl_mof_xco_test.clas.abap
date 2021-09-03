@@ -61,7 +61,7 @@ CLASS zcl_mof_xco_test IMPLEMENTATION.
     lo_wo_class->set_short_description( 'XCO Work Order class' ).
     lo_wo_class->definition->add_interface( 'IF_OO_ADT_CLASSRUN' ).
     lo_wo_class->implementation->add_method( 'IF_OO_ADT_CLASSRUN~MAIN'
-      )->set_source( value #(
+      )->set_source( VALUE #(
         ( |SELECT * FROM Z{ lv_xco_gen_id }_XCO_WRKORD INTO TABLE @DATA(lt_workorders).| )
         ( |DATA(lv_num_workorders) = lines( lt_workorders ).| )
         ( |out->write( \|Number of workorders: \{ lines( lt_workorders ) \}\| ). | )
