@@ -64,7 +64,7 @@ CLASS zcl_mof_xco_test IMPLEMENTATION.
       )->set_source( VALUE #(
         ( |SELECT * FROM Z{ lv_xco_gen_id }_XCO_WRKORD INTO TABLE @DATA(lt_workorders).| )
         ( |DATA(lv_num_workorders) = lines( lt_workorders ).| )
-        ( |out->write( \|Number of workorders: \{ lines( lt_workorders ) \}\| ). | )
+        ( |out->write( \|Num. of workorders: \{ lines( lt_workorders ) \}\| ). | )
       ) ).
 
     lo_put_operation->execute( ).
